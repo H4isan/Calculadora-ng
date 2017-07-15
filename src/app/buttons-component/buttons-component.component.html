@@ -1,0 +1,13 @@
+
+
+<div class="row">
+  <div class="col-xs-10 row">
+      <a href="#" *ngFor="let btn of buttonsValue[0]" class=" col-xs-3 action-button shadow animate" [ngClass]="btn.color" (click)="readEvent(btn.value)">{{btn.value}}</a>
+      <a href="#" (click)="readEvent('.')" class="action-button shadow animate green col-xs-3">.</a>
+      <a href="#" (click)="readEvent('=')" class="action-button shadow animate yellow col-xs-3">=</a>
+  </div>
+  <div class="col-xs-2 row">
+     <a href="#" *ngFor="let btn of buttonsValue[1]" class=" col-xs-12 action-button shadow animate" [ngClass]="btn.color" (click)="readEvent(btn.value)">{{btn.value}}</a>
+  </div>
+    <a href="#" (click)="setClear()" class=" col-xs-12 action-button shadow animate red col-xs-3">Clear</a>
+</div>
